@@ -22,14 +22,34 @@ namespace WpfApp1
             InitializeComponent();
             using (Model1 context = new Model1())
             {
-                dataGrid1.ItemsSource = context.Ticket.ToArray();
+                if (context.Category.Any() == false)
+                {
+                    context.Category.Add(new Category() { CategoryName = "Бизнес" });
+                    context.Category.Add(new Category() { CategoryName = "Эконом" });
+                }
+
+                context.SaveChanges();
+
+                cbCategories.ItemsSource = context.Category.ToArray();
+                if (context.Route.Any() == false)
+                {
+                    context.Route.Add(new Route() { RouteName = "Новосибирск - Москва" });
+                    context.Route.Add(new Route() { RouteName = "Москва - СПБ" });
+                }
+                context.SaveChanges() ;
+                cbRoute.ItemsSource = context.Route.ToArray();
             }
+            
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             Model1 context = new Model1();
-            context.Ticket.Add(new Ticket() { FirstNameP = textBox1.Text.ToString(), LastNameP = textBox2.Text.ToString() });
+            var selectedCategory = (int) cbCategories.SelectedValue;
+
+            var selectedRoute = (int) cbRoute.SelectedValue;
+
+            //context.Ticket.Add(new Ticket() { FirstNameP = textBox1.Text.ToString(), LastNameP = textBox2.Text.ToString(), CategoryId = selectedCategory });
             context.SaveChanges();
         }
     }

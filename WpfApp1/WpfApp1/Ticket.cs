@@ -13,10 +13,11 @@ namespace WpfApp1
         public string FirstNameP { get; set; }
         [Required, MaxLength(30)]
         public string LastNameP { get; set; }
-        [Key]
         public int TicketId { get; set; }
+
         public int CruiseId { get; set; }
         public virtual Cruise Cruise { get; set; }
+
         public int CategoryId { get; set; }
         public virtual Category Category { get; set; }
 

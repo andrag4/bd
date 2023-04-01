@@ -11,6 +11,9 @@ namespace WpfApp1
     {
         [Key]
         public int CategoryId { get; set; }
+        public string CategoryName { get; set; }
+
+
         public virtual ICollection<Ticket> Tickets { get; set; }
         public Category()
         {

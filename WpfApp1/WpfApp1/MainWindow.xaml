@@ -7,9 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="521" Width="1635" >
     <DockPanel>
-        <Button x:Name="button1" Content="Button" DockPanel.Dock="Right" Click="button1_Click"/>
+        <Button x:Name="button1" Content="Button" DockPanel.Dock="Bottom" Click="button1_Click"/>
         <DataGrid x:Name="dataGrid1" Width="1368" d:ItemsSource="{d:SampleData ItemCount=5}" Height="237"/>
-        <TextBox x:Name="textBox1" TextWrapping="Wrap" Text="TextBox" DockPanel.Dock="Bottom" VerticalContentAlignment="Bottom"/>
-        <TextBox x:Name="textBox2" TextWrapping="Wrap" Text="TextBox" Width="100"/>
+        <TextBox x:Name="textBox1" TextWrapping="Wrap" Text="TextBox" DockPanel.Dock="Bottom" VerticalContentAlignment="Bottom" RenderTransformOrigin="0.5,0.5" Height="166" Width="265">
+        </TextBox>
+        <TextBox x:Name="textBox2" TextWrapping="Wrap" Text="TextBox" DockPanel.Dock="Bottom" VerticalContentAlignment="Bottom" RenderTransformOrigin="0.5,0.5" Height="228" Width="193">            
+        </TextBox>
+        <ComboBox Width="100" x:Name="cbCategories" DisplayMemberPath="CategoryName" SelectedValuePath="CategoryId"/>
+        <ComboBox Width="100" x:Name="cbRoute" DisplayMemberPath="RouteName" SelectedValuePath="RouteId"/>
     </DockPanel>
 </Window>
