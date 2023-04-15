@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp1.Forms;
 
 namespace WpfApp1
 {
@@ -20,37 +21,50 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
-            using (Model1 context = new Model1())
-            {
-                if (context.Category.Any() == false)
-                {
-                    context.Category.Add(new Category() { CategoryName = "Бизнес" });
-                    context.Category.Add(new Category() { CategoryName = "Эконом" });
-                }
+        //    using (Model1 context = new Model1())
+        //    {
+        //        if (context.Category.Any() == false)
+        //        {
+        //            context.Category.Add(new Category() { CategoryName = "Бизнес" });
+        //            context.Category.Add(new Category() { CategoryName = "Эконом" });
+        //        }
 
-                context.SaveChanges();
+        //        context.SaveChanges();
 
-                cbCategories.ItemsSource = context.Category.ToArray();
-                if (context.Route.Any() == false)
-                {
-                    context.Route.Add(new Route() { RouteName = "Новосибирск - Москва" });
-                    context.Route.Add(new Route() { RouteName = "Москва - СПБ" });
-                }
-                context.SaveChanges() ;
-                cbRoute.ItemsSource = context.Route.ToArray();
-            }
+        //        cbCategories.ItemsSource = context.Category.ToArray();
+        //        if (context.Route.Any() == false)
+        //        {
+        //            context.Route.Add(new Route() { RouteName = "Новосибирск - Москва" });
+        //            context.Route.Add(new Route() { RouteName = "Москва - СПБ" });
+        //        }
+        //        context.SaveChanges() ;
+        //        cbRoute.ItemsSource = context.Route.ToArray();
+        //    }
             
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
+        //private void button1_Click(object sender, RoutedEventArgs e)
+        //{
+        //    Model1 context = new Model1();
+        //    var selectedCategory = (int) cbCategories.SelectedValue;
+
+        //    var selectedRoute = (int) cbRoute.SelectedValue;
+
+        //    //context.Ticket.Add(new Ticket() { FirstNameP = textBox1.Text.ToString(), LastNameP = textBox2.Text.ToString(), CategoryId = selectedCategory });
+        //    context.SaveChanges();
+        //}
+
+        private void TicketItem_Click(object sender, RoutedEventArgs e)
         {
-            Model1 context = new Model1();
-            var selectedCategory = (int) cbCategories.SelectedValue;
+           WindowTicket windowTicket = new WindowTicket();
+            windowTicket.ShowDialog();
+            
+        }
 
-            var selectedRoute = (int) cbRoute.SelectedValue;
-
-            //context.Ticket.Add(new Ticket() { FirstNameP = textBox1.Text.ToString(), LastNameP = textBox2.Text.ToString(), CategoryId = selectedCategory });
-            context.SaveChanges();
+        private void CruiseItem_Click(object sender, RoutedEventArgs e)
+        {
+           CruiseWindow cruiseWindow = new CruiseWindow();
+            cruiseWindow.ShowDialog();
         }
     }
 

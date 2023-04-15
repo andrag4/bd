@@ -17,7 +17,7 @@ namespace WpfApp1
 
         public int CruiseId { get; set; }
         public virtual Cruise Cruise { get; set; }
-
+        public double price { get; set; }
         public int CategoryId { get; set; }
         public virtual Category Category { get; set; }
 

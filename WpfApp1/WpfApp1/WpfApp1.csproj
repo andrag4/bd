@@ -67,8 +67,29 @@
     <Compile Include="Category.cs" />
     <Compile Include="Cruise.cs" />
     <Compile Include="Destination.cs" />
+    <Compile Include="Forms\AddForms.xaml.cs">
+      <DependentUpon>AddForms.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CruiseWindow.xaml.cs">
+      <DependentUpon>CruiseWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WindowTicket.xaml.cs">
+      <DependentUpon>WindowTicket.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Route.cs" />
     <Compile Include="Ticket.cs" />
+    <Page Include="Forms\AddForms.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\CruiseWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\WindowTicket.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -111,7 +132,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Forms\" />
     <Folder Include="Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
