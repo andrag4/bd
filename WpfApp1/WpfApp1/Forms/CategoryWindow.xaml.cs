@@ -15,19 +15,19 @@ using System.Windows.Shapes;
 namespace WpfApp1.Forms
 {
     /// <summary>
-    /// Interaction logic for WindowTicket.xaml
+    /// Interaction logic for CategoryWindow.xaml
     /// </summary>
-    public partial class WindowTicket : Window
+    public partial class CategoryWindow : Window
     {
-        public WindowTicket()
+        public CategoryWindow()
         {
             InitializeComponent();
         }
 
-
-        private void add_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            AddCategoryForms addCategoryForms = new AddCategoryForms();
+            addCategoryForms.ShowDialog();
         }
     }
 }

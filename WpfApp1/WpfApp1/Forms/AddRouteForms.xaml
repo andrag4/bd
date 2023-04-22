@@ -1,0 +1,20 @@
+﻿<Window x:Class="WpfApp1.Forms.AddRouteForms"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.Forms"
+        mc:Ignorable="d"
+        Title="AddRouteForms" Height="450" Width="800">
+    <StackPanel>
+        <UniformGrid Columns="2">
+            <TextBlock Text="RouteName"></TextBlock>
+            <TextBox Name="RouteNameTB"></TextBox>
+            <TextBlock Text="Route"></TextBlock>
+            <ComboBox></ComboBox>
+            <Button Name="Add"></Button>
+            <Button Name="Cancele" Click="Cancele_Click"></Button>
+        </UniformGrid>
+    </StackPanel>
+
+</Window>

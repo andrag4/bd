@@ -12,22 +12,21 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WpfApp1.Forms
+namespace WpfApp1
 {
     /// <summary>
-    /// Interaction logic for CruiseWindow.xaml
+    /// Interaction logic for AddCategoryForms.xaml
     /// </summary>
-    public partial class CruiseWindow : Window
+    public partial class AddCategoryForms : Window
     {
-        public CruiseWindow()
+        public AddCategoryForms()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void CancelCategory_Click(object sender, RoutedEventArgs e)
         {
-            AddCruiseForms addCruiseForms = new AddCruiseForms();
-            addCruiseForms.ShowDialog();
+            Close();
         }
     }
 }

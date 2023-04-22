@@ -10,8 +10,8 @@
     <Menu>
         <MenuItem Header="Ticket" Click="TicketItem_Click"/>
         <MenuItem Header="Cruise" Click="CruiseItem_Click"/>
-        <MenuItem Header="Route" />
-        <MenuItem Header="Category"/>
-        <MenuItem Header="Destination"/>
+        <MenuItem Header="Route" Click="RouteItem_Click" />
+        <MenuItem Header="Category" Click="CategoryItem_Click"/>
+        <MenuItem Header="Destination" Click="DestinationItem_Click_1"/>
     </Menu>
 </Window>

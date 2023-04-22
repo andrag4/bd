@@ -15,19 +15,19 @@ using System.Windows.Shapes;
 namespace WpfApp1.Forms
 {
     /// <summary>
-    /// Interaction logic for CruiseWindow.xaml
+    /// Interaction logic for RouteWindow.xaml
     /// </summary>
-    public partial class CruiseWindow : Window
+    public partial class RouteWindow : Window
     {
-        public CruiseWindow()
+        public RouteWindow()
         {
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            AddCruiseForms addCruiseForms = new AddCruiseForms();
-            addCruiseForms.ShowDialog();
+            AddRouteForms addRouteForms = new AddRouteForms();
+            addRouteForms.ShowDialog();
         }
     }
 }

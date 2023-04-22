@@ -12,16 +12,21 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WpfApp1.Forms
+namespace WpfApp1
 {
     /// <summary>
-    /// Interaction logic for AddForms.xaml
+    /// Interaction logic for AddCruiseForms.xaml
     /// </summary>
-    public partial class AddForms : Window
+    public partial class AddCruiseForms : Window
     {
-        public AddForms()
+        public AddCruiseForms()
         {
             InitializeComponent();
+        }
+
+        private void CancelCruise_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }
