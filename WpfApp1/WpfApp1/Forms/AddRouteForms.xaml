@@ -11,8 +11,8 @@
             <TextBlock Text="RouteName"></TextBlock>
             <TextBox Name="RouteNameTB"></TextBox>
             <TextBlock Text="Route"></TextBlock>
-            <ComboBox></ComboBox>
-            <Button Name="Add"></Button>
+            <ComboBox x:Name="RouteCB" DisplayMemberPath="RouteName" SelectedValuePath="RouteId"></ComboBox>
+            <Button Name="Add" Click="Add_Click"></Button>
             <Button Name="Cancele" Click="Cancele_Click"></Button>
         </UniformGrid>
     </StackPanel>

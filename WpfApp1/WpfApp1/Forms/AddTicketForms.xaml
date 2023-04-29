@@ -15,6 +15,8 @@
             <TextBlock Text="Category"></TextBlock>
             <ComboBox x:Name="CategoryCB" DisplayMemberPath="CategoryName" SelectedValuePath="CategoryId">
             </ComboBox>
+            <TextBlock Text="Cruise"></TextBlock>
+            <ComboBox x:Name="CruiseCB" DisplayMemberPath="CruiseName" SelectedValuePath="CruiseId"></ComboBox>
             <TextBlock Text="Price"></TextBlock>
             <TextBox x:Name="PriceTB"></TextBox>
             <Button x:Name="AddOnFormButton" Click="AddOnFormButton_Click">Add</Button>

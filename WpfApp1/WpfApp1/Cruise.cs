@@ -14,7 +14,8 @@ namespace WpfApp1
     {
         [Key]
         public int CruiseId { get; set; }
-        public DateTime? Date { get; set; }
+        public string CruiseName { get; set; } 
+        public DateTime? CruiseDate { get; set; }
         public virtual ICollection<Ticket> Tickets { get; set; }
         public int RouteId { get; set; }
         public virtual Route Route { get; set; }

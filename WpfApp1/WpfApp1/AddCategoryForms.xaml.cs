@@ -28,5 +28,15 @@ namespace WpfApp1
         {
             Close();
         }
+
+        private void AddCategory_Click(object sender, RoutedEventArgs e)
+        {
+            Model1 context = new Model1();
+            context.Category.Add(new Category()
+            {
+                CategoryName = CategoryNameTB.Text.ToString()
+            });
+            context.SaveChanges();
+        }
     }
 }

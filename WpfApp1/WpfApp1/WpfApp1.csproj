@@ -107,6 +107,14 @@
     <Compile Include="Migrations\202304221107335_Initial migration.designer.cs">
       <DependentUpon>202304221107335_Initial migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202304290628292_db.cs" />
+    <Compile Include="Migrations\202304290628292_db.designer.cs">
+      <DependentUpon>202304290628292_db.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304290646458_123.cs" />
+    <Compile Include="Migrations\202304290646458_123.designer.cs">
+      <DependentUpon>202304290646458_123.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Route.cs" />
     <Compile Include="Ticket.cs" />
@@ -179,6 +187,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202304221107335_Initial migration.resx">
       <DependentUpon>202304221107335_Initial migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304290628292_db.resx">
+      <DependentUpon>202304290628292_db.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304290646458_123.resx">
+      <DependentUpon>202304290646458_123.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

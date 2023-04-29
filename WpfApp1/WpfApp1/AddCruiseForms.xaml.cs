@@ -22,11 +22,36 @@ namespace WpfApp1
         public AddCruiseForms()
         {
             InitializeComponent();
+            using (Model1 context = new Model1())
+            {
+
+                if(context != null)
+                {
+                    context.Cruise.Add(new Cruise() { CruiseName = "СПБ-МСК" });
+                    context.Cruise.Add(new Cruise() { CruiseName = "НСК-МСК" });
+                    context.SaveChanges();
+                }
+
+
+                SelectRouteCB.ItemsSource = context.Cruise.ToArray();
+            }
         }
 
         private void CancelCruise_Click(object sender, RoutedEventArgs e)
         {
             Close();
         }
+
+        private void AddCruise_Click(object sender, RoutedEventArgs e)
+        {
+            Model1 context = new Model1();
+            context.Cruise.Add(new Cruise()
+            {
+                CruiseDate = CruiseDateDP.SelectedDate,
+                CruiseName = SelectRouteCB.SelectedItem.ToString(),
+            }); 
+            context.SaveChanges();
+        }
     }
 }
+

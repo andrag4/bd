@@ -9,8 +9,8 @@
     <StackPanel>
         <UniformGrid>
             <TextBlock Text="CategoryName"></TextBlock>
-            <TextBox x:Name="CategoryNmaeTB"></TextBox>
-            <Button x:Name="AddCategory"></Button>
+            <TextBox x:Name="CategoryNameTB"></TextBox>
+            <Button x:Name="AddCategory" Click="AddCategory_Click"></Button>
             <Button x:Name="CancelCategory" Click="CancelCategory_Click"/>
         </UniformGrid>
     </StackPanel>

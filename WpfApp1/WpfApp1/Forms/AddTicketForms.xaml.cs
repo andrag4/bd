@@ -26,10 +26,13 @@ namespace WpfApp1.Forms
             using (Model1 context = new Model1())
             {
 
-                
+                if(context.Category.Any()==false)
                 {
                     context.Category.Add(new Category() { CategoryName = "Бизнес" });
                     context.Category.Add(new Category() { CategoryName = "Эконом" });
+                    Route route = context.Route.First(t => t.RouteName == "Новосибирск - Москва");
+                    context.Cruise.Add(new Cruise() { CruiseName = "НСК-СПБ", Route = route });
+
                     context.SaveChanges();
                 }
 
@@ -49,6 +52,7 @@ namespace WpfApp1.Forms
                 FirstNameP = FNameTB.Text.ToString(),
                // Category = CategoryCB.SelectedItem as Category,
                 CategoryId = (int)CategoryCB.SelectedValue,
+                CruiseId = (int)CruiseCB.SelectedValue,
                 Price = Convert.ToDouble(PriceTB) }); ;
             context.SaveChanges();
         }

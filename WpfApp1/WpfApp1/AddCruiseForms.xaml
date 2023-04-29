@@ -7,10 +7,12 @@
         mc:Ignorable="d"
         Title="AddCruiseForms" Height="450" Width="800">
     <StackPanel>
-        <UniformGrid>
+        <UniformGrid Columns="2">
             <TextBlock Text="CruiseDate"></TextBlock>
-            <TextBox x:Name="CruiseNameTB"></TextBox>
-            <Button x:Name="AddCruise"></Button>
+            <DatePicker x:Name="CruiseDateDP"/>
+            <TextBlock Text="SelectRoute"></TextBlock>
+            <ComboBox x:Name="SelectRouteCB"></ComboBox>
+            <Button x:Name="AddCruise" Click="AddCruise_Click"></Button>
             <Button x:Name="CancelCruise" Click="CancelCruise_Click"></Button>
         </UniformGrid>
     </StackPanel>
